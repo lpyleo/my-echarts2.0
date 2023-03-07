@@ -1,26 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="wrapper">
+    <BarChart class="chart"></BarChart>
+  </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+<script setup>
+import BarChart from './components/BarChart.vue';
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-</style>
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+.wrapper .chart {
+  width: 50%;
+  height: 90%;
+}</style>
